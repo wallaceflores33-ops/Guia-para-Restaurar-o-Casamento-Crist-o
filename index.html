@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia para Restaurar o Casamento Cristão</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2122781628637962');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2122781628637962&ev=PageView&noscript=1"
+/></noscript>
+<style>
+  :root {
+    --night: #1C1410;
+    --linen: #F5EFE4;
+    --linen-dark: #EDE4D3;
+    --gold: #B8972E;
+    --gold-light: #D4B54A;
+    --gold-pale: #F0E8CC;
+    --sage: #2C3E2D;
+    --sage-light: #3D5540;
+    --cream: #F9F5EE;
+    --warm-text: #3A2E24;
+    --soft-text: #6B5B4E;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--linen);
+    color: var(--warm-text);
+    overflow-x: hidden;
+  }
+
+  /* ── TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── CROSS SVG DIVIDER ── */
+  .cross-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto;
+  }
+  .cross-divider::before,
+  .cross-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.4;
+    max-width: 180px;
+  }
+  .cross-icon {
+    color: var(--gold);
+    font-size: 18px;
+    line-height: 1;
+    opacity: 0.8;
+  }
+
+  /* ── VERSE TAG ── */
+  .verse-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.03em;
+    opacity: 0.85;
+  }
+
+  /* ── ANNOUNCEMENT BAR ── */
+  .topbar {
+    background: var(--sage);
+    color: var(--gold-pale);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.05em;
+    font-style: italic;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--night);
+    background-image: 
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184,151,46,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 80% at 20% 100%, rgba(44,62,45,0.3) 0%, transparent 60%);
+    padding: 96px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '✝';
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    color: var(--gold);
+    opacity: 0.3;
+    letter-spacing: 0;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 6vw, 54px);
+    font-weight: 600;
+    line-height: 1.18;
+    color: var(--cream);
+    max-width: 680px;
+    margin: 0 auto 24px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.4s forwards;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(17px, 2.5vw, 21px);
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(249,245,238,0.72);
+    max-width: 600px;
+    margin: 0 auto 44px;
+    opacity: 0;
+    animation: fadeUp 1s 0.6s forwards;
+  }
+
+  .hero-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 520px;
+    margin: 0 auto 48px;
+    text-align: left;
+    opacity: 0;
+    animation: fadeUp 1s 0.7s forwards;
+  }
+
+  .hero-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: rgba(249,245,238,0.78);
+    line-height: 1.5;
+  }
+
+  .hero-step-num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(184,151,46,0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-top: 1px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--night);
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 18px 44px;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    box-shadow: 0 6px 32px rgba(184,151,46,0.3);
+    opacity: 0;
+    animation: fadeUp 1s 0.9s forwards;
+    position: relative;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(184,151,46,0.45);
+  }
+
+  .btn-guarantee {
+    display: block;
+    margin-top: 14px;
+    font-size: 12px;
+    color: rgba(249,245,238,0.45);
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* ── SECTION GENERIC ── */
+  .section {
+    padding: 72px 0;
+  }
+
+  .section--dark {
+    background: var(--night);
+    background-image: radial-gradient(ellipse 100% 50% at 50% 100%, rgba(44,62,45,0.2) 0%, transparent 70%);
+  }
+
+  .section--sage {
+    background: var(--sage);
+  }
+
+  .section--linen {
+    background: var(--linen-dark);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 52px;
+  }
+
+  .section-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 600;
+    line-height: 1.22;
+    color: var(--warm-text);
+  }
+
+  .section-title--light {
+    color: var(--cream);
+  }
+
+  /* ── O QUE É ── */
+  .what-is {
+    background: var(--cream);
+    padding: 80px 0;
+  }
+
+  .what-is-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.8vw, 26px);
+    line-height: 1.7;
+    color: var(--warm-text);
+    max-width: 640px;
+    margin: 0 auto 52px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .how-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 560px;
+    margin: 0 auto;
+    border-left: 2px solid rgba(184,151,46,0.3);
+    padding-left: 0;
+  }
+
+  .how-step {
+    display: flex;
+    gap: 24px;
+    padding: 24px 0 24px 32px;
+    position: relative;
+  }
+
+  .how-step::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 30px;
+    width: 10px;
+    height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .how-step-content h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .how-step-content p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--soft-text);
+  }
+
+  /* ── BLOCOS ── */
+  .blocks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .block-item {
+    background: rgba(249,245,238,0.05);
+    border: 1px solid rgba(184,151,46,0.2);
+    padding: 36px 32px;
+    transition: background 0.3s, border-color 0.3s;
+    position: relative;
+  }
+
+  .block-item:hover {
+    background: rgba(184,151,46,0.07);
+    border-color: rgba(184,151,46,0.45);
+  }
+
+  .block-roman {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    opacity: 0.6;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .block-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+
+  .block-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(249,245,238,0.58);
+    font-weight: 300;
+  }
+
+  /* ── PRA QUEM É ── */
+  .for-whom {
+    background: var(--cream);
+    padding: 80px 0;
+  }
+
+  .whom-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .whom-item {
+    display: flex;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(184,151,46,0.15);
+    align-items: flex-start;
+  }
+
+  .whom-item:last-child { border-bottom: none; }
+
+  .whom-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: rgba(184,151,46,0.12);
+    border: 1px solid rgba(184,151,46,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 2px;
+  }
+
+  .whom-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--warm-text);
+  }
+
+  /* ── BONUS ── */
+  .bonus-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .bonus-card {
+    background: linear-gradient(145deg, rgba(184,151,46,0.06), rgba(184,151,46,0.02));
+    border: 1.5px solid var(--gold);
+    padding: 32px 28px;
+    position: relative;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .bonus-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(184,151,46,0.18);
+  }
+
+  .bonus-badge {
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background: var(--gold);
+    color: var(--night);
+    font-family: 'Lato', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+  }
+
+  .bonus-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .bonus-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .bonus-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(249,245,238,0.58);
+    margin-bottom: 16px;
+  }
+
+  .bonus-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--gold-light);
+  }
+
+  .bonus-value s {
+    color: rgba(249,245,238,0.35);
+    margin-right: 4px;
+  }
+
+  /* ── OFERTA ── */
+  .offer-section {
+    background: var(--night);
+    background-image: 
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184,151,46,0.1) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 0% 100%, rgba(44,62,45,0.25) 0%, transparent 50%);
+    padding: 96px 0;
+    text-align: center;
+  }
+
+  .offer-box {
+    border: 1px solid rgba(184,151,46,0.35);
+    background: rgba(184,151,46,0.04);
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 52px 44px;
+    position: relative;
+  }
+
+  .offer-box::before,
+  .offer-box::after {
+    content: '✝';
+    position: absolute;
+    font-size: 14px;
+    color: var(--gold);
+    opacity: 0.3;
+  }
+  .offer-box::before { top: 16px; left: 20px; }
+  .offer-box::after  { bottom: 16px; right: 20px; }
+
+  .offer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3.5vw, 32px);
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 36px;
+    line-height: 1.3;
+  }
+
+  .offer-list {
+    text-align: left;
+    list-style: none;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .offer-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    color: rgba(249,245,238,0.78);
+  }
+
+  .offer-list li::before {
+    content: '✓';
+    flex-shrink: 0;
+    color: var(--gold);
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+
+  .offer-list li.bonus-item::before {
+    content: '＋';
+    color: var(--gold-light);
+  }
+
+  .price-block {
+    margin-bottom: 36px;
+    padding: 28px 0;
+    border-top: 1px solid rgba(184,151,46,0.2);
+    border-bottom: 1px solid rgba(184,151,46,0.2);
+  }
+
+  .price-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 8px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .price-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    font-weight: 600;
+    color: var(--cream);
+    line-height: 1;
+  }
+
+  .price-main sup {
+    font-size: 24px;
+    vertical-align: super;
+    color: var(--gold-light);
+  }
+
+  .price-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: rgba(249,245,238,0.45);
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  .btn-offer {
+    display: block;
+    background: var(--gold);
+    color: var(--night);
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 20px 32px;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    box-shadow: 0 8px 36px rgba(184,151,46,0.35);
+    margin-bottom: 20px;
+  }
+
+  .btn-offer:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 48px rgba(184,151,46,0.5);
+  }
+
+  .guarantee-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(249,245,238,0.38);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #110D09;
+    padding: 48px 0;
+    text-align: center;
+    border-top: 1px solid rgba(184,151,46,0.12);
+  }
+
+  .footer-cross {
+    font-size: 20px;
+    color: var(--gold);
+    opacity: 0.3;
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .footer-disclaimer {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(249,245,238,0.3);
+    max-width: 520px;
+    margin: 0 auto 28px;
+    line-height: 1.7;
+  }
+
+  .footer-guarantee {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: rgba(184,151,46,0.6);
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+
+  .footer-cta-link {
+    display: inline-block;
+    color: var(--gold);
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(184,151,46,0.4);
+    padding: 14px 32px;
+    transition: background 0.25s, color 0.25s;
+  }
+  .footer-cta-link:hover {
+    background: var(--gold);
+    color: var(--night);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .blocks-grid { grid-template-columns: 1fr; }
+    .bonus-grid  { grid-template-columns: 1fr; }
+    .offer-box   { padding: 40px 24px; }
+    .hero        { padding: 72px 0 64px; }
+    .hero-steps  { text-align: left; }
+    .how-steps   { padding-left: 24px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-eyebrow, .hero h1, .hero-sub, .hero-steps, .btn-primary { animation: none; opacity: 1; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="topbar">
+  "O que Deus uniu, o homem não separe." — Mateus 19:6
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Pra casais cristãos que querem reconectar</p>
+
+    <h1>Guia para Restaurar o<br><em>Casamento Cristão</em><br>4 Passos Práticos</h1>
+
+    <p class="hero-sub">
+      Pra reconectar, perdoar e recomeçar —<br>com base na fé, com exercícios práticos pra fazer juntos.
+    </p>
+
+    <div class="hero-steps">
+      <div class="hero-step">
+        <span class="hero-step-num">1</span>
+        <span>Vocês voltam a se comunicar de verdade.</span>
+      </div>
+      <div class="hero-step">
+        <span class="hero-step-num">2</span>
+        <span>Vocês praticam o perdão com base na Palavra.</span>
+      </div>
+      <div class="hero-step">
+        <span class="hero-step-num">3</span>
+        <span>Vocês reconstroem a intimidade.</span>
+      </div>
+      <div class="hero-step">
+        <span class="hero-step-num">4</span>
+        <span>Vocês renovam o compromisso — juntos.</span>
+      </div>
+    </div>
+
+    <a href="#oferta" class="btn-primary">
+      Quero o Guia Completo
+    </a>
+    <span class="btn-guarantee">Pagamento único · Acesso imediato · Garantia de 7 dias</span>
+  </div>
+</section>
+
+<!-- O QUE É -->
+<section class="what-is">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">O que é isso</span>
+      <h2 class="section-title">Não é uma leitura solta.<br>É um guia que vocês fazem juntos.</h2>
+    </div>
+
+    <p class="what-is-body reveal">
+      Cada bloco traz uma reflexão bíblica, um exercício prático e uma pergunta guiada — pra o casal fazer sentado, junto, com direção clara. Vocês só imprimem e seguem.
+    </p>
+
+    <div class="how-steps reveal">
+      <div class="how-step">
+        <div class="how-step-content">
+          <h4>Passo 1</h4>
+          <p>O casal separa um momento da semana pra fazer juntos.</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-content">
+          <h4>Passo 2</h4>
+          <p>Lêem a reflexão bíblica do bloco e fazem o exercício prático.</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-content">
+          <h4>Passo 3</h4>
+          <p>Conversam a partir da pergunta guia daquele bloco.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE VEM DENTRO -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label" style="color: var(--gold-light);">O que vem dentro</span>
+      <h2 class="section-title section-title--light">4 blocos. Um recomeço.</h2>
+    </div>
+
+    <div class="blocks-grid reveal">
+      <div class="block-item">
+        <span class="block-roman">BLOCO I</span>
+        <h3 class="block-title">Comunicação</h3>
+        <p class="block-desc">Reflexão e exercício pra voltar a se ouvir de verdade, sem repetir os mesmos ruídos de sempre.</p>
+      </div>
+      <div class="block-item">
+        <span class="block-roman">BLOCO II</span>
+        <h3 class="block-title">Perdão</h3>
+        <p class="block-desc">Reflexão bíblica sobre perdão e exercício prático pra tratar mágoas específicas do casal.</p>
+      </div>
+      <div class="block-item">
+        <span class="block-roman">BLOCO III</span>
+        <h3 class="block-title">Intimidade</h3>
+        <p class="block-desc">Reflexão e exercício voltados a reconstruir proximidade emocional e afetiva.</p>
+      </div>
+      <div class="block-item">
+        <span class="block-roman">BLOCO IV</span>
+        <h3 class="block-title">Renovação</h3>
+        <p class="block-desc">Reflexão de fechamento e exercício de renovação do compromisso do casal.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 48px;" class="reveal">
+      <div class="cross-divider" style="max-width:420px; margin: 0 auto;">
+        <span class="cross-icon">✝</span>
+      </div>
+      <p class="verse-tag" style="margin-top:18px; font-size:15px; opacity:0.6;">
+        "O amor é paciente, o amor é bondoso." — 1 Coríntios 13:4
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PRA QUEM É -->
+<section class="for-whom">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Pra quem é</span>
+      <h2 class="section-title">Esse guia é pra você se…</h2>
+    </div>
+
+    <div class="whom-list reveal">
+      <div class="whom-item">
+        <span class="whom-icon">🕊</span>
+        <p class="whom-text">Sente que o casamento esfriou e não sabe por onde recomeçar — precisa de um primeiro passo prático, não só desejo de melhorar.</p>
+      </div>
+      <div class="whom-item">
+        <span class="whom-icon">📖</span>
+        <p class="whom-text">Quer trabalhar o casamento com base na fé, mas não sabe como estruturar isso a dois — o guia já traz a estrutura pronta.</p>
+      </div>
+      <div class="whom-item">
+        <span class="whom-icon">🤝</span>
+        <p class="whom-text">Não tem condição ou abertura pra aconselhamento de casal agora — mas quer fazer algo prático entre vocês dois.</p>
+      </div>
+      <div class="whom-item">
+        <span class="whom-icon">💬</span>
+        <p class="whom-text">Guarda mágoas antigas que nunca foram realmente conversadas — o bloco de perdão dá espaço estruturado pra isso.</p>
+      </div>
+      <div class="whom-item">
+        <span class="whom-icon">❤️</span>
+        <p class="whom-text">Sente falta de intimidade e não sabe como reabrir esse assunto — o exercício guiado facilita começar essa conversa.</p>
+      </div>
+      <div class="whom-item">
+        <span class="whom-icon">📅</span>
+        <p class="whom-text">Quer reservar um momento fixo da semana só pro casamento — o guia dá o roteiro pra esse momento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section" style="background: var(--linen-dark); padding: 72px 0;">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Como funciona</span>
+      <h2 class="section-title">Do pagamento até a primeira conversa</h2>
+    </div>
+
+    <div class="how-steps reveal" style="max-width: 500px;">
+      <div class="how-step">
+        <div class="how-step-content">
+          <h4>Hora zero</h4>
+          <p>Compra e recebe o PDF na hora, direto no e-mail.</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-content">
+          <h4>Antes de começar</h4>
+          <p>Imprime o guia completo — 20 páginas, pronto pra usar.</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-content">
+          <h4>No ritmo de vocês</h4>
+          <p>Um bloco por semana, na hora que fizer sentido pro casal. Sem pressão, sem prazo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label" style="color: var(--gold-light);">Bônus inclusos</span>
+      <h2 class="section-title section-title--light">Dois extras pra aprofundar</h2>
+    </div>
+
+    <div class="bonus-grid reveal">
+      <div class="bonus-card">
+        <span class="bonus-badge">Bônus</span>
+        <span class="bonus-icon">📋</span>
+        <h3 class="bonus-title">Lista de Perguntas Extras Pra Aprofundar a Conversa</h3>
+        <p class="bonus-desc">Perguntas adicionais pra usar caso o casal queira ir além do que já vem em cada bloco.</p>
+        <p class="bonus-value"><s>R$ 19,00</s> — incluso</p>
+      </div>
+      <div class="bonus-card">
+        <span class="bonus-badge">Bônus</span>
+        <span class="bonus-icon">🙏</span>
+        <h3 class="bonus-title">Orações Guiadas Pra Casais</h3>
+        <p class="bonus-desc">Compilado de orações pra usar antes ou depois de cada bloco do guia.</p>
+        <p class="bonus-value"><s>R$ 15,00</s> — incluso</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA FINAL -->
+<section id="oferta" class="offer-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label" style="color: var(--gold-light);">Oferta completa</span>
+      <h2 class="section-title section-title--light">Tudo que vem com o guia</h2>
+    </div>
+
+    <div class="offer-box reveal">
+      <h3 class="offer-title">Guia para Restaurar<br>o Casamento Cristão</h3>
+
+      <ul class="offer-list">
+        <li>Bloco 1 — Comunicação (reflexão + exercício + conversa)</li>
+        <li>Bloco 2 — Perdão (reflexão + exercício + conversa)</li>
+        <li>Bloco 3 — Intimidade (reflexão + exercício + conversa)</li>
+        <li>Bloco 4 — Renovação (reflexão + exercício + conversa)</li>
+        <li class="bonus-item">Bônus 1 — Lista de Perguntas Extras</li>
+        <li class="bonus-item">Bônus 2 — Orações Guiadas Pra Casais</li>
+        <li>Formato: PDF de 20 páginas, pronto pra imprimir</li>
+        <li>Entrega imediata por e-mail</li>
+        <li>Garantia incondicional de 7 dias</li>
+      </ul>
+
+      <div class="price-block">
+        <p class="price-label">Tudo por apenas</p>
+        <div class="price-main"><sup>R$</sup>17<sup>,90</sup></div>
+        <p class="price-sub">Pagamento único — sem mensalidade</p>
+      </div>
+
+      <a href="https://pay.cakto.com.br/t49wg8o_1099229" class="btn-offer" target="_blank">
+        Liberar Acesso Agora
+      </a>
+
+      <p class="guarantee-text">
+        Garantia incondicional de 7 dias.<br>Se não for pra você, devolvemos 100% — sem perguntas.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <span class="footer-cross">✝</span>
+    <p class="footer-disclaimer">
+      Este material é um apoio espiritual e prático pra casais e não substitui aconselhamento conjugal profissional. Em situações de conflito grave ou qualquer forma de abuso, procure ajuda profissional e as autoridades competentes.
+    </p>
+    <p class="footer-guarantee">Garantia incondicional de 7 dias — se não for pra você, devolvemos 100%.</p>
+    <a href="https://pay.cakto.com.br/t49wg8o_1099229" class="footer-cta-link" target="_blank">Liberar Acesso Agora</a>
+  </div>
+</footer>
+
+<script>
+  // Intersection Observer para reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // stagger entre irmãos reveal dentro da mesma seção
+        const siblings = Array.from(entry.target.parentElement?.querySelectorAll('.reveal') || []);
+        const idx = siblings.indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, idx * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Anchor do botão hero scroll suave
+  document.querySelectorAll('a[href="#oferta"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('oferta').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
